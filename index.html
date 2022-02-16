@@ -7,6 +7,7 @@
     <title>Money Manage</title>
   
     <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/51365fb52a.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -17,31 +18,37 @@
 <body>
 
 
-     <section class="container mx-auot">
+     <section class="container-fluid mx-auto">
          <h1 class="text-center text-info m-5">Money Manage</h1>
-        <div class="d-flex justify-content-between">
-            <div>
+        <div class="d-flex my-5 Money-manage-container">
+            <div class="ms-5 ">
                 <img src="./images/Money-manage.jfif" alt="" class="money-Manage-img">
             </div>
-            <div class="bg-success bg-opacity-25 w-100 ms-5 p-3 text-center">
-                <h3 class=" fs-3 text-center">Income</h3> <br>
+
+            <!------- Income and balance calculation --------->
+            <div class="bg-success bg-opacity-25 w-100 mx-5 p-3 text-center">
+                <h3 class="fs-3 text-center">Income</h3> <br>
                 
-                <p class="fs-5 fw-bold border-0"><label for="income-input">Income: <input type="number"></label></p>
+                <p class="fs-5 fw-bold border-0"><label for="income-input">Income: <input type="number" id="income"></label></p>
 
                 <h2 class="">Expenses</h2>
 
-                <p class="fs-5 fw-bold border-0"><label for="income-input">Food: <input type="number"></label></p>
+                <p class="fs-5 fw-bold border-0"><label for="food-input">Food: <input type="number" id="food-input"></label></p>
 
-                <p class="fs-5 fw-bold border-0"><label for="income-input">Rent:  <input type="number"></label></p>
+                <p class="fs-5 fw-bold border-0"><label for="rent-input">Rent:  <input type="number" id="rent-input"></label></p>
 
-                <p class="fs-5 fw-bold border-0"><label for="income-input">Cloth:  <input type="number"></label></p>
+                <p class="fs-5 fw-bold border-0"><label for="cloth-input">Cloth:  <input type="number" id="cloth-input"></label></p>
 
-                <button class="btn-info py-2 px-4 fs-4 border-0 rounded-lg fs-3 text-white rounded">Calculate</button>
+                <button class="btn-info py-2 px-4 fs-4 border-0 rounded-lg fs-3 text-white rounded" id="calculate-btn">Calculate</button>
 
-                <h3 class="mt-5">Total Expenses: 4500</h3>
+                <h3 class="mt-5">Total Expenses: <span id="total-expanses">4500</span></h3>
 
-                <h3 class="mt-3">Balance: 4000</h3>
+                <h3 class="mt-3">Balance: <span id="balance">4000</span> </h3>
 
+             <!---x---- Income and balance calculation ----x----->
+                    
+
+                <!--------- Saving aera --------->
                 <div class="mt-3">
                     <p class="fs-5 fw-bold border-0 d-inline"><label for="income-input">Save:  <input class="money-mange-input" type="number"></label></p>
                     <span class="fs-2 mx-3">%</span>
@@ -53,7 +60,16 @@
 
                 </div>
 
+                <!---------- Validation messagwe --------->
+                <div class="notify">
+                    <h3 class="mt-3 text-danger">Please give a valid input <i class="fa-solid fa-skull-crossbones"></i></h3>
+                </div>
+                <!--x--------- Validation messagwe ----x->
+            
+            
+                <!-------x-------- Saving aera ------x------>
             </div>
+            
         </div>   
 
      </section>

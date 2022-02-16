@@ -3,7 +3,23 @@
 
 .money-Manage-img{
     height: 100vh;
+   
 }
 .money-mange-input{
    width: 100px;
 }
+
+/* @media only screen and (max-width: 600px) {
+
+    .Money-manage-container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .Money-mange-img{
+        width: 70%;
+        overflow: hidden;
+    }
+  
+   
+  } */
