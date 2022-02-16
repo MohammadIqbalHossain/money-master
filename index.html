@@ -18,15 +18,15 @@
 <body>
 
 
-     <section class="container-fluid mx-auto">
+     <section class="container">
          <h1 class="text-center text-info m-5">Money Manage</h1>
         <div class="d-flex my-5 Money-manage-container">
-            <div class="ms-5 ">
+            <div class="w-100 money-Manage-img">
                 <img src="./images/Money-manage.jfif" alt="" class="money-Manage-img">
             </div>
 
             <!------- Income and balance calculation --------->
-            <div class="bg-success bg-opacity-25 w-100 mx-5 p-3 text-center">
+            <div class="input-container bg-success bg-opacity-25 w-100 mx-5 p-3 text-center">
                 <h3 class="fs-3 text-center">Income</h3> <br>
                 
                 <p class="fs-5 fw-bold border-0"><label for="income-input">Income: <input type="number" id="income"></label></p>
@@ -50,19 +50,19 @@
 
                 <!--------- Saving aera --------->
                 <div class="mt-3">
-                    <p class="fs-5 fw-bold border-0 d-inline"><label for="income-input">Save:  <input class="money-mange-input" type="number"></label></p>
+                    <p class="fs-5 fw-bold border-0 d-inline"><label for="save-input" id >Save:  <input class="money-mange-input" type="number" id="save-input"></label></p>
                     <span class="fs-2 mx-3">%</span>
-                    <button class="btn-info py-1 px-4 fs-4 border-0 rounded-lg fs-3 text-white rounded">Save</button>
+                    <button id="save" class="btn-info py-1 px-4 fs-4 border-0 rounded-lg fs-3 text-white rounded">Save</button>
 
-                    <h3 class="mt-5">Saving Amount: 3000</h3>
+                    <h3 class="mt-5">Saving Amount: <span id="save-amount">3000</span> </h3>
 
-                    <h3 class="mt-3">Remainig Amount: 2600</h3>
+                    <h3 class="mt-3">Remainig Amount: <span id="Remain-amount">2600</span> </h3>
 
                 </div>
 
                 <!---------- Validation messagwe --------->
                 <div class="notify">
-                    <h3 class="mt-3 text-danger">Please give a valid input <i class="fa-solid fa-skull-crossbones"></i></h3>
+                    <h3 id="validation" class="validation">Please give a valid input <i class="fa-solid fa-arrows-cross"></i></h3>
                 </div>
                 <!--x--------- Validation messagwe ----x->
             

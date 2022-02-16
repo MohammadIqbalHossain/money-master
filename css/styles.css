@@ -2,24 +2,42 @@
 
 
 .money-Manage-img{
-    height: 100vh;
+    /* height: 100vh; */
+   display: flex;
+    
    
 }
 .money-mange-input{
    width: 100px;
 }
+.validation{
+    color: red;
+    font-size: 30px;
+    margin: 25px 0;
+    font-family: 'Courier New', Courier, monospace;
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
     .Money-manage-container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         
     }
     .Money-mange-img{
-        width: 70%;
+        width: 100%;
+        margin-top: 20px;
         overflow: hidden;
+    }
+    .input-container{
+        margin-top: 20px;
     }
   
    
-  } */
+  }
