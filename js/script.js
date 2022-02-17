@@ -43,7 +43,7 @@ function updateInput(foodtId, rentId, clothId) {
                 document.getElementById('validation').style.display = 'block';
             }
 
-            isIncomeGreater();
+            
           
         }
         
@@ -51,13 +51,13 @@ function updateInput(foodtId, rentId, clothId) {
    
 
 
-function  isIncomeGreater(){
-    const totalExpenses = document.getElementById('total-expanses').innerText;
-    const income = document.getElementById('income').value;
-    if(totalExpenses > income){
-        alert('You Can not spend more');
-    }
-}
+// function  isIncomeGreater(){
+//     const totalExpenses = document.getElementById('total-expanses').innerText;
+//     const income = document.getElementById('income').value;
+//     if(totalExpenses > income){
+//         alert('You Can not spend more');
+//     }
+// }
 
 
 
