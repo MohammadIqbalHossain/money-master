@@ -16,20 +16,21 @@ function updateInput(foodtId, rentId, clothId) {
         const rentInput = document.getElementById(rentId);
         const clothInput = document.getElementById(clothId);
         
-        const foodInputValue = parseFloat(foodInput.value);
-        const rentInputValue = parseFloat(rentInput.value);
-        const clothInputValue = parseFloat(clothInput.value);
+        const foodInputValue = foodInput.value;
+        const rentInputValue = rentInput.value;
+        const clothInputValue = clothInput.value;
 
-
-
-        if(foodInputValue, rentInputValue, clothInputValue < 0){
+        if(foodInputValue, rentInputValue , clothInputValue < 0){
             document.getElementById('validation').style.display = 'block';
         }
-        else if(foodInputValue, rentInputValue, clothInputValue == ''){
-    
-            document.getElementById('str-notify').style.display = 'block';
+
+        else if(isNaN(foodInputValue, rentInputValue, clothInputValue == true)){
+            document.getElementById('str-notify').style.display ='block';
         }
-        else{
+         
+        else {
+        
+     
             const totalExpenses = document.getElementById('total-expanses');
             const expanceSum = totalExpenses.innerText = parseInt(foodInputValue) + parseInt(rentInputValue) + parseInt(clothInputValue);
             
@@ -37,20 +38,17 @@ function updateInput(foodtId, rentId, clothId) {
             const incomeValue = parseInt(income);
             const balance = document.getElementById('balance');
             balance.innerText = incomeValue - expanceSum;
-            
 
-            if(income < 0 || typeof income !== 'number'){
+            if(income < 0){
                 document.getElementById('validation').style.display = 'block';
             }
-            
-            
-       }
-   
 
+            isIncomeGreater();
+          
+        }
+        
 }
-
-
-
+   
 
 
 function  isIncomeGreater(){
@@ -83,5 +81,3 @@ document.getElementById('save').addEventListener('click', function(){
     }
     
 })
-
-
