@@ -15,14 +15,12 @@
     font-size: 30px;
     margin: 25px 0;
     font-family: 'Courier New', Courier, monospace;
-    visibility: hidden;
+    display: none;
     
 }
-.visible {
-    visibility: visible;
-}
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 800px) {
 
     .Money-manage-container {
         display: flex;
@@ -37,8 +35,33 @@
         overflow: hidden;
     }
     .input-container{
+       margin: 20px auto;
+    }
+  
+   
+  } 
+
+  @media (min-width: 300px) and (max-width: 600px) { 
+    .Money-manage-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .Money-mange-img{
+        width: 100%;
         margin-top: 20px;
+        
+    }
+    .input-container{
+      margin: 20px 40px;
+     
+      
+      
+      
     }
   
    
   }
+   
