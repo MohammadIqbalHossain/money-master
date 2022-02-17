@@ -15,54 +15,52 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
     // const incomeValue = parseInt(income);
     // const balance = document.getElementById('balance');
     // balance.innerText = incomeValue - expanceSum;
+    updateInput('food-input', 'rent-input','cloth-input');
 
-  updateInput('food-input', 'rent-input', 'cloth-input')
+  
 
 })
 
+function updateInput(foodtId, rentId, clothId) {
 
-
-function updateInput(inputId){
-        
-            const foodInput = document.getElementById(inputId);
-            const rentInput = document.getElementById(inputId);
-            const clothInput = document.getElementById(inputId);
+    if(foodtId, rentId, clothId < 0){
+        // document.getElementById('validation').classList.add('visible');
+        document.getElementById('validation').style.display = 'block';
+    }
+    const foodInput = document.getElementById(foodtId);
+    const rentInput = document.getElementById(rentId);
+    const clothInput = document.getElementById(clothId);
+    
+    const foodInputValue = foodInput.value;
+    const rentInputValue = rentInput.value;
+    const clothInputValue = clothInput.value
+    
+    const totalExpenses = document.getElementById('total-expanses');
+    const expanceSum = totalExpenses.innerText = parseInt(foodInputValue) + parseInt(rentInputValue) + parseInt(clothInputValue);
     
     
-            const foodInputValue = foodInput.value;
-            const rentInputValue = rentInput.value;
-            const clothInputValue = clothInput.value
-    
-    
-            const totalExpenses = document.getElementById('total-expanses');
-            const expanceSum = totalExpenses.innerText = parseInt(foodInputValue) + parseInt(rentInputValue) + parseInt(clothInputValue);
-            
-            
-            const income = document.getElementById('income').value;
-            const incomeValue = parseInt(income);
-            const balance = document.getElementById('balance');
-            balance.innerText = incomeValue - expanceSum;
-        
-
-        if(inputId.value < 0 || inputId !== 'number'){
-            document.getElementById('validation').classList.add('visible');
-           
-        }
-           
+    const income = document.getElementById('income').value;
+    const incomeValue = parseInt(income);
+    const balance = document.getElementById('balance');
+    balance.innerText = incomeValue - expanceSum;
 
 }
+
+
+
 
 document.getElementById('save').addEventListener('click', function(){
     const income = document.getElementById('income').value;
     const saveInputValue = document.getElementById('save-input').value;
-    const percent = (saveInputValue / income) * 100;
-    const neumericPercent = (percent * 0.01) * income;
-    console.log(neumericPercent);
-    
-    const saveAmount = document.getElementById('save-amount').innerText = percent;
+    const neumericPercent = income * parseFloat(saveInputValue / 100)
+    const saveAmount = document.getElementById('save-amount').innerText = neumericPercent;
     const balanceRemain = document.getElementById('balance').innerText;
+    document.getElementById('Remain-amount').innerText =  balanceRemain - saveAmount;
+
+    if(balanceRemain < saveAmount){
+        alert("isufuceent balance")
+    }
     
-    document.getElementById('Remain-amount').innerText =  balanceRemain - percent;
 
     
 })
