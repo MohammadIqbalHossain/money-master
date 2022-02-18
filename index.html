@@ -19,7 +19,7 @@
 
 
      <section class="container">
-         <h1 class="text-center text-info m-5">Money Manage</h1>
+         <h1 class="text-center text-success m-5 fw-bold">Money Manage</h1>
         <div class="d-flex my-5 Money-manage-container">
             <div class="w-100 money-Manage-img">
                 <img src="./images/Money-manage.jfif" alt="" class="money-Manage-img">
@@ -29,15 +29,19 @@
             <div class="input-container bg-success bg-opacity-25 mx-5 px-5 w-100 text-center">
                 <h3 class="fs-3 text-center">Income</h3> <br>
                 
-                <p class="fs-5 fw-bold border-0 input"><label for="income-input">Income: <input type="number" id="income"></label></p>
+                <p class="fs-5 fw-bold border-0 input"><label for="income-input">Income: <input type="number" id="income"></label> <br>
+                </p>
 
                 <h2 class="">Expenses</h2>
 
-                <p class="fs-5 fw-bold border-0 input"><label for="food-input">Food: <input type="text" id="food-input"></label></p>
+                <p class="fs-5 fw-bold border-0 input"><label for="food-input">Food: <input type="text" id="food-input"></label> <br>
+                </p>
 
-                <p class="fs-5 fw-bold border-0 input"><label for="rent-input">Rent:  <input type="text" id="rent-input"></label></p>
+                <p class="fs-5 fw-bold border-0 input"><label for="rent-input">Rent:  <input type="text" id="rent-input"></label> <br>
+                </p>
 
-                <p class="fs-5 fw-bold border-0 input"><label for="cloth-input">Cloth:  <input type="text" id="cloth-input"></label></p>
+                <p class="fs-5 fw-bold border-0 input"><label for="cloth-input">Cloth:  <input type="text" id="cloth-input"></label> <br>
+                </p>
 
                 <button class="btn-info py-2 px-4 fs-4 border-0 rounded-lg fs-3 text-white rounded" id="calculate-btn">Calculate</button>
 
@@ -52,7 +56,7 @@
                 <div class="mt-3">
                     <p class="fs-5 fw-bold border-0 d-inline"><label for="save-input" id >Save:  <input class="money-mange-input" type="text" id="save-input"></label></p>
                     <span class="fs-2 mx-3">%</span>
-                    <button id="save" class="btn-info py-1 px-4 fs-4 border-0 rounded-lg fs-3 text-white rounded">Save</button>
+                    <button id="save" class="btn-info py-1 px-4 fs-4 border-0 rounded-lg fs-3 text-white rounded mt-3">Save</button>
 
                     <h3 class="mt-5">Saving Amount: <span id="save-amount">00</span> </h3>
 
@@ -62,13 +66,14 @@
 
                 <!---------- Validation messagwe --------->
                 <div class="notify" >
-                    <h3 id="validation" class="validation">Please Give an integer</h3>
-                    <h3 id="str-notify" class="validation">Please give a valid number</h3>
+                    <h3 id="validation" class="validation">Please Give an integer <i class="fa-solid fa-circle-xmark"></i></h3>
+                    <h3 id="str-notify" class="validation">Please give a valid number <i class="fa-solid fa-circle-xmark"></i></h3>
                 </div>
                 <!--x--------- Validation messagwe ----x->
             
             
                 <!-------x-------- Saving aera ------x------>
+                <button class="btn-danger px-5 py-2 border-0 fs-5 fw-bold text-white rounded" onclick="reset()">Reset</button>
             </div>
             
         </div>   

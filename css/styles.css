@@ -1,25 +1,41 @@
+ 
 
+body{
+    background-image: 
+    linear-gradient(45deg, rgba(
+      145, 146, 122, 0.62), rgba(
+        217, 91, 132, 0.58));
+}
 
 
 .money-Manage-img{
-    /* height: 100vh; */
+   width: 100%;
    display: flex;
+   border-radius: 10px;
+   
     
    
 }
 .money-mange-input{
    width: 100px;
 }
+.input-container{
+    border-radius: 15px;
+    padding: 20px;
+    background-color: khaki;
+}
 .validation{
     color: red;
     font-size: 30px;
     margin: 25px 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
     display: none;
     
 }
 
 
+
+/* Responsivenes for tablet */
 @media only screen and (max-width: 800px) {
 
     .Money-manage-container {
@@ -36,11 +52,13 @@
     }
     .input-container{
        margin: 20px auto;
+       margin: 20px;
     }
   
    
   } 
 
+  /* Responsiveness for mobile */
   @media (min-width: 300px) and (max-width: 600px) { 
     .Money-manage-container {
         display: flex;
@@ -55,11 +73,8 @@
         
     }
     .input-container{
-      margin: 20px 40px;
-     
-      
-      
-      
+      margin: 20px auto;
+   
     }
   
    
